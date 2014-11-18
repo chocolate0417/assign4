@@ -109,10 +109,11 @@ void keyPressed() {
 void alienMaker(int alienNumber, int alienCol) { 
   int number=0;
   for (int i=0; i<alienNumber; i++) {
-    aList[number]= new Alien(50+40*(i% alienCol), 50+50*(i/alienCol));
+   float x =  i% alienCol;
+   float y = i/alienCol;
+   aList[number]= new Alien(50+40*(int)x, 50+50*(int)y);
     number++;
   }
-
   /*int number=0;
    for (int col=0;col<=alienCol;col++){
    for (int row=0;row<=alienNumber/alienCol;row++){
